@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{a1c5eb5b-642a-4207-9a07-cbeff3b6f2c4}</ProjectGuid>
+    <RootNamespace>DiscordRichPresence</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>ICKProject</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GLEW_STATIC;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\GLFW\include;%(AdditionalIncludeDirectories);$(SolutionDir)Dependencies\GLEW\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLEW\lib\Release\Win32;$(SolutionDir)Dependencies\GLFW\lib-vc2019</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;User32.lib;Gdi32.lib;Shell32.lib;glew32s.lib;Advapi32.lib</AdditionalDependencies>
+      <AdditionalOptions>/NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:msvcrtd.lib %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GLEW_STATIC;WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\GLFW\include;%(AdditionalIncludeDirectories);$(SolutionDir)Dependencies\GLEW\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLEW\lib\Release\Win32;$(SolutionDir)Dependencies\GLFW\lib-vc2019</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;User32.lib;Gdi32.lib;Shell32.lib;glew32s.lib;Advapi32.lib;bass.lib</AdditionalDependencies>
+      <AdditionalOptions>/NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:msvcrtd.lib %(AdditionalOptions)</AdditionalOptions>
+      <DelayLoadDLLs>%(DelayLoadDLLs)</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Dependencies\BASS\dll.cpp" />
+    <ClCompile Include="Dependencies\BASS\dll_image.cpp" />
+    <ClCompile Include="Dependencies\discord\connection_win.cpp" />
+    <ClCompile Include="Dependencies\discord\discord_register_win.cpp" />
+    <ClCompile Include="Dependencies\discord\discord_rpc.cpp" />
+    <ClCompile Include="Dependencies\discord\rpc_connection.cpp" />
+    <ClCompile Include="Dependencies\discord\serialization.cpp" />
+    <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\vendor\imgui\imgui.cpp" />
+    <ClCompile Include="src\vendor\imgui\imgui_demo.cpp" />
+    <ClCompile Include="src\vendor\imgui\imgui_draw.cpp" />
+    <ClCompile Include="src\vendor\imgui\imgui_impl_glfw_gl3.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Dependencies\BASS\api.h" />
+    <ClInclude Include="Dependencies\BASS\bass.h" />
+    <ClInclude Include="Dependencies\BASS\dll.h" />
+    <ClInclude Include="Dependencies\BASS\random.h" />
+    <ClInclude Include="Dependencies\BASS\sounds.h" />
+    <ClInclude Include="Dependencies\BASS\string_obfuscation.h" />
+    <ClInclude Include="Dependencies\discord\backoff.h" />
+    <ClInclude Include="Dependencies\discord\connection.h" />
+    <ClInclude Include="Dependencies\discord\include\discord_register.h" />
+    <ClInclude Include="Dependencies\discord\include\discord_rpc.h" />
+    <ClInclude Include="Dependencies\discord\msg_queue.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\allocators.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\cursorstreamwrapper.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\document.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\encodedstream.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\encodings.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\error\en.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\error\error.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\filereadstream.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\filewritestream.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\fwd.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\internal\biginteger.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\internal\clzll.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\internal\diyfp.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\internal\dtoa.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\internal\ieee754.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\internal\itoa.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\internal\meta.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\internal\pow10.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\internal\regex.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\internal\stack.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\internal\strfunc.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\internal\strtod.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\internal\swap.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\istreamwrapper.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\memorybuffer.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\memorystream.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\msinttypes\inttypes.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\msinttypes\stdint.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\ostreamwrapper.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\pointer.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\prettywriter.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\rapidjson.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\reader.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\schema.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\stream.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\stringbuffer.h" />
+    <ClInclude Include="Dependencies\discord\rapidjson\writer.h" />
+    <ClInclude Include="Dependencies\discord\rpc_connection.h" />
+    <ClInclude Include="Dependencies\discord\serialization.h" />
+    <ClInclude Include="Dependencies\stb_image.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="ShlObj.h" />
+    <ClInclude Include="src\vendor\imgui\imconfig.h" />
+    <ClInclude Include="src\vendor\imgui\imgui.h" />
+    <ClInclude Include="src\vendor\imgui\imgui_impl_glfw_gl3.h" />
+    <ClInclude Include="src\vendor\imgui\imgui_internal.h" />
+    <ClInclude Include="src\vendor\imgui\stb_rect_pack.h" />
+    <ClInclude Include="src\vendor\imgui\stb_textedit.h" />
+    <ClInclude Include="src\vendor\imgui\stb_truetype.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Dependencies\discord\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ICKProject.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="GLFW_ICON.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

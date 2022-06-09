@@ -1,0 +1,36 @@
+﻿  Application.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\minwindef.h(130,1): warning C4005: "APIENTRY": ponowna definicja makra
+C:\Users\PC\source\repos\PawelPloszaj\ICKProject\Dependencies\GLFW\include\GLFW\glfw3.h(123): message : zobacz poprzednią definicję „APIENTRY”
+C:\Users\PC\source\repos\PawelPloszaj\ICKProject\src\Application.cpp(302,24): warning C4244: "inicjowanie": konwersja z "QWORD" do "float", możliwa utrata danych
+C:\Users\PC\source\repos\PawelPloszaj\ICKProject\src\Application.cpp(306,34): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
+C:\Users\PC\source\repos\PawelPloszaj\ICKProject\src\Application.cpp(339,5): warning C4007: "WinMain": musi być "__stdcall"
+C:\Users\PC\source\repos\PawelPloszaj\ICKProject\src\Application.cpp(469,39): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\PC\source\repos\PawelPloszaj\ICKProject\src\Application.cpp(541,39): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\PC\source\repos\PawelPloszaj\ICKProject\src\Application.cpp(570,42): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
+C:\Users\PC\source\repos\PawelPloszaj\ICKProject\src\Application.cpp(856,39): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+F:\Visual Studio 2022\VC\Tools\MSVC\14.32.31326\include\xstring(2603,27): warning C4244: "argument": konwersja z "wchar_t" do "const _Elem", możliwa utrata danych
+          with
+          [
+              _Elem=char
+          ]
+C:\Users\PC\source\repos\PawelPloszaj\ICKProject\src\Application.cpp(44): message : zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)” funkcji szablon
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+C:\Users\PC\source\repos\PawelPloszaj\ICKProject\src\Application.cpp(44): message : zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)” funkcji szablon
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+  Trwa generowanie kodu
+  138 of 1941 functions ( 7.1%) were compiled, the rest were copied from previous compilation.
+    81 functions were new in current compilation
+    20 functions had inline decision re-evaluated but remain unchanged
+  Zakończono generowanie kodu
+glew32s.lib(glew.obj) : warning LNK4099: nie znaleziono pliku PDB „vc120.pdb” z elementem „glew32s.lib(glew.obj)” lub w pozycji „C:\Users\PC\source\repos\PawelPloszaj\ICKProject\Release\vc120.pdb”; obiekt zostanie skonsolidowany bez informacji debugowania
+  ICKProject.vcxproj -> C:\Users\PC\source\repos\PawelPloszaj\ICKProject\Release\ICKProject.exe
